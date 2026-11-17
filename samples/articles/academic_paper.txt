@@ -1,0 +1,17 @@
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.

@@ -1,0 +1,21 @@
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.

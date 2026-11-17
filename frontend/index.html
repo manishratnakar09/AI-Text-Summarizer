@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Text Summarizer</title>
+  <meta name="description" content="Summarize long documents and text into short, accurate summaries.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><span class="logo">AI</span> Text Summarizer</a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#summarizer">Summarizer</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+      </nav>
+      <span class="badge" id="aiStatus" title="AI engine status">Checking…</span>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container">
+      <h1>Read less. <span>Understand more.</span></h1>
+      <p>Turn long articles, reports and documents into clear, accurate summaries in one click.</p>
+    </div>
+  </section>
+
+  <main class="container" id="summarizer">
+    <div class="grid">
+      <!-- INPUT -->
+      <section class="card" aria-labelledby="inTitle">
+        <div class="card-head">
+          <h2 id="inTitle">Your text</h2>
+          <button class="link-btn" id="sampleBtn" type="button">Try sample</button>
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" id="tabText" aria-selected="true" data-tab="text">Paste text</button>
+          <button class="tab" role="tab" id="tabFile" aria-selected="false" data-tab="file">Upload file</button>
+        </div>
+
+        <div id="paneText">
+          <textarea id="inputText" rows="12" placeholder="Paste or type the text you want to summarize (minimum 30 words)…" aria-label="Text to summarize"></textarea>
+        </div>
+
+        <div id="paneFile" hidden>
+          <label class="dropzone" id="dropzone" for="fileInput">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0L7 9m5-5 5 5"/><path d="M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3"/></svg>
+            <strong>Drag &amp; drop a file here</strong>
+            <span>or click to browse · TXT, PDF, DOCX · max 10 MB</span>
+            <input type="file" id="fileInput" accept=".txt,.pdf,.docx" hidden>
+          </label>
+          <p class="file-info" id="fileInfo" hidden></p>
+        </div>
+
+        <div class="meta-row">
+          <span><b id="inWords">0</b> words</span>
+          <span><b id="inChars">0</b> characters</span>
+          <button class="link-btn" id="clearBtn" type="button">Clear</button>
+        </div>
+
+        <div class="options">
+          <div class="field">
+            <span class="label">Summary length</span>
+            <div class="segmented" id="lengthGroup" role="radiogroup" aria-label="Summary length">
+              <label><input type="radio" name="length" value="short"><span>Short</span></label>
+              <label><input type="radio" name="length" value="medium" checked><span>Medium</span></label>
+              <label><input type="radio" name="length" value="long"><span>Long</span></label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="mode">Method</label>
+            <select id="mode">
+              <option value="hybrid">Hybrid (extractive + AI) — recommended</option>
+              <option value="abstractive">Abstractive (AI)</option>
+              <option value="extractive">Extractive (no AI needed)</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="switch"><input type="checkbox" id="customToggle"><span class="slider"></span> Custom length</label>
+            <div class="custom" id="customBox" hidden>
+              <select id="customType" aria-label="Custom length unit">
+                <option value="words">Words</option>
+                <option value="sentences">Sentences</option>
+              </select>
+              <input type="number" id="customValue" min="1" max="2000" value="100" aria-label="Custom length value">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="switch"><input type="checkbox" id="bullets"><span class="slider"></span> Bullet-point summary</label>
+          </div>
+        </div>
+
+        <button class="btn primary" id="generateBtn" type="button">
+          <span class="btn-label">Generate Summary</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+        <p class="error" id="errorBox" role="alert" hidden></p>
+      </section>
+
+      <!-- OUTPUT -->
+      <section class="card output" aria-labelledby="outTitle" aria-live="polite">
+        <div class="card-head">
+          <h2 id="outTitle">Summary</h2>
+          <span class="badge muted" id="methodBadge" hidden></span>
+        </div>
+
+        <div class="placeholder" id="placeholder">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          <p>Your summary will appear here.</p>
+        </div>
+
+        <div class="loading" id="loading" hidden>
+          <div class="big-spinner"></div>
+          <p>Summarizing… long documents may take a few seconds.</p>
+        </div>
+
+        <div id="result" hidden>
+          <div class="stats">
+            <div><b id="statOrig">0</b><small>Original words</small></div>
+            <div><b id="statSum">0</b><small>Summary words</small></div>
+            <div><b id="statRed">0%</b><small>Shorter</small></div>
+          </div>
+          <div class="warn" id="warnBox" hidden></div>
+          <div class="summary-text" id="summaryText"></div>
+          <div class="actions">
+            <button class="btn" id="copyBtn" type="button">Copy</button>
+            <button class="btn" id="dlTxt" type="button">Download TXT</button>
+            <button class="btn" id="dlPdf" type="button">Download PDF</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="info" id="how">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div><span>1</span><h3>Add your text</h3><p>Paste text or upload a TXT, PDF or DOCX file.</p></div>
+        <div><span>2</span><h3>Choose settings</h3><p>Pick the length, method and optional bullet points.</p></div>
+        <div><span>3</span><h3>Get your summary</h3><p>Copy it or download it as TXT or PDF.</p></div>
+      </div>
+    </section>
+
+    <section class="info" id="features">
+      <h2>Built to stay faithful to your text</h2>
+      <ul class="feature-list">
+        <li>Uses only information from your document — no outside facts.</li>
+        <li>Keeps names, dates and numbers; unsupported figures are rejected automatically.</li>
+        <li>Long documents are split into chunks so nothing is skipped.</li>
+        <li>If the AI service is unavailable, a local extractive summary is used instead.</li>
+        <li>API keys stay on the server — never in your browser.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container">AI Text Summarizer · Skillinf AI Week 3 Project</div></footer>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

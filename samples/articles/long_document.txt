@@ -1,0 +1,689 @@
+PART 1
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 2
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 3
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 4
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 5
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 6
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 7
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 8
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 9
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
+
+PART 10
+
+
+City Council Approves New Metro Line Linking Airport to Old Town
+
+The Riverton City Council voted 9 to 3 on Tuesday to approve a new 18-kilometre metro line that will connect Riverton International Airport with the Old Town district. Mayor Priya Nair said the project would cost 4,500 crore rupees and is scheduled to open in 2029.
+
+Construction is expected to begin in June 2026, with the first phase covering 7 kilometres between the airport and Central Junction. The line will have 14 stations, and officials estimate it will carry 250,000 passengers every day once it is fully operational.
+
+Transport commissioner Dr. Arvind Kulkarni told reporters that travel time between the airport and Old Town will fall from 70 minutes by road to 25 minutes by metro. He added that the project is expected to create 8,000 jobs during construction and about 1,200 permanent jobs afterwards.
+
+Not everyone welcomed the decision. Council member Rahul Deshmukh, who voted against the plan, argued that the budget was too high and that money should first be spent on repairing existing roads. Farmers near the airport corridor also raised concerns about land acquisition. The state government said every affected family would receive compensation at twice the market rate and a guaranteed housing plot.
+
+Environmental groups gave the plan a cautious welcome. The Riverton Green Alliance said the metro could remove nearly 40,000 cars from the roads each day, but it asked the council to protect the 300 mature trees along the planned route. The council promised that two new trees would be planted for every tree removed.
+
+The project will be funded through a combination of state grants, a loan from a development bank and central government support. A final tender for the construction contract is expected to be published next month. Residents can submit comments on the route until 30 April through the city's public portal.
+
+Effects of Spaced Retrieval Practice on Long-Term Retention in Undergraduate Students
+
+Abstract and Introduction
+
+Retention of course material is a persistent challenge in higher education. Many students rely on re-reading and massed study sessions, strategies that feel productive but often produce weak long-term memory. Cognitive psychology has long suggested that retrieval practice, the act of recalling information from memory, strengthens learning more than passive review. When retrieval attempts are spaced over time, the benefits are generally larger. This study examines whether a spaced retrieval programme improves retention in an introductory statistics course.
+
+Method
+
+A total of 184 undergraduate students enrolled in an introductory statistics course participated. Students were randomly assigned to one of two groups. The experimental group (n = 92) completed short low-stakes quizzes at intervals of one, seven and twenty-one days after each lecture. The control group (n = 92) studied the same material using re-reading and self-selected review. Both groups received identical lectures, readings and instructor support throughout the 12-week semester.
+
+Results
+
+Retention was measured with a cumulative final examination and a delayed test administered six weeks after the course ended. On the final examination, the experimental group scored an average of 78.4 percent compared with 70.1 percent for the control group, a statistically significant difference (p < 0.01). The advantage was larger on the delayed test, where the experimental group averaged 69.8 percent and the control group 56.2 percent. Students in the experimental group also reported lower exam anxiety, although this effect was modest.
+
+Discussion
+
+The findings support the claim that spaced retrieval practice improves both short-term and long-term retention. The larger gap on the delayed test suggests that the benefit grows as time passes. Several limitations should be noted. The study was conducted at a single institution and focused on one subject, so the results may not generalise to other disciplines. Quiz completion was also voluntary for some activities, which may have introduced selection effects. Future research should test the approach across multiple courses and examine which spacing intervals are most effective.
+
+Rate Limiting in the Orders API
+
+Overview
+
+The Orders API uses rate limiting to protect the service from abuse and to ensure fair usage between clients. Every request is counted against the API key supplied in the Authorization header. When the limit is exceeded, the server rejects the request with HTTP status 429 (Too Many Requests).
+
+Limits
+
+The default limit is 100 requests per minute for each API key. Accounts on the Business plan receive 1,000 requests per minute, and Enterprise customers can request custom limits by contacting support. Burst traffic is allowed up to 20 requests per second, but sustained traffic above the per-minute limit will be rejected. Limits are enforced using a sliding window algorithm, so the counter decreases gradually instead of resetting at the start of each minute.
+
+Response Headers
+
+Each response includes three headers. X-RateLimit-Limit shows the maximum number of requests allowed in the current window. X-RateLimit-Remaining shows how many requests are still available. X-RateLimit-Reset contains the Unix timestamp at which the window resets. When a request is rejected, the response also includes a Retry-After header that tells the client how many seconds to wait.
+
+Handling 429 Errors
+
+Clients should never retry immediately after receiving a 429 response. Instead, wait for the number of seconds given in the Retry-After header. For transient errors, use exponential backoff starting at one second and doubling after every failed attempt, up to a maximum delay of 32 seconds. Adding a small random jitter to each delay prevents many clients from retrying at the same moment.
+
+Best Practices
+
+Cache responses that rarely change, such as product catalogues, to reduce the number of calls. Use the bulk endpoint /v2/orders/batch to create up to 50 orders in a single request. Monitor the X-RateLimit-Remaining header and slow down before the limit is reached. Rate limit rules may change, so check the release notes before each major upgrade.
+
+The Last Lighthouse Keeper
+
+When Meera Joshi arrived at the island in the autumn of 1987, the lighthouse had already been automated for three years. The government had sent her only to close the building and hand the keys to the harbour office. She expected to stay a week. She stayed eleven years.
+
+On the first night, a storm rolled in from the west and the automatic lamp failed. Meera climbed the 112 stairs with a flashlight and found a corroded switch. She repaired it by hand and sat beside the lamp until sunrise, watching the beam sweep across the dark water. In the morning, a fisherman named Dattu Patil rowed to the shore to thank her. Three of his friends had been returning from the deep sea, and the light had guided them home.
+
+After that night, Meera could not leave. She began to keep a logbook, writing down the weather, the ships that passed and the small repairs she made. Fishermen started leaving fresh bread and fish at her door. Children from the mainland visited on weekends, and she taught them to read the stars. The harbour office quietly stopped asking for the keys.
+
+Years later, a new satellite system made the old light almost unnecessary, and officials proposed to shut it down permanently. The villagers gathered more than 2,000 signatures asking to keep it burning. Meera did not argue or make speeches. She simply opened her logbook and let the officials read the eleven years of entries. Many of them described boats that had been saved by the beam.
+
+The lighthouse still stands today. Some people say it is useless in the age of technology. Meera believed that a machine can guide a ship, but only a person can care whether it arrives. That, she said, is the real work of a keeper: to be present, to be watching, and to make the dark a little less lonely.
